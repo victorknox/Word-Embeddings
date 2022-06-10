@@ -69,7 +69,6 @@ embedding_layer = layers.Embedding(N_WORDS, EMBEDDING_DIM,
                                    input_shape=(2,))
 model = keras.Sequential([
   embedding_layer,
-  layers.GlobalAveragePooling1D(),
   layers.Dense(1, activation='sigmoid'),
 ])
 
